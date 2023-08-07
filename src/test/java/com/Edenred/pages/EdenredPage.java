@@ -28,5 +28,4 @@ public class EdenredPage {
     @FindBy (xpath = "//main[@id='main']/section[3]/div[2]/div/div/h2[contains(text(), 'values')]")
     public WebElement ourValues;
 
-
 }

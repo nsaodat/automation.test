@@ -50,11 +50,12 @@ public class LearnAboutEdenred_StepDefinitions {
         BrowserUtils.sleep(1);
 
 
-  for (int i = 0; i < 2; i++) {
-        BrowserUtils.sleep(1);
-        js.executeScript("window.scrollBy(0, -700)");
+        for (int i = 0; i < 2; i++) {
+            BrowserUtils.sleep(1);
+            js.executeScript("window.scrollBy(0, -700)");
+        }
     }
-    }
+
     @Then("the user sees {string}")
     public void user_sees_the(String expectedValues) {
         WebElement ourValues = edenredPage.ourValues;
@@ -62,13 +63,6 @@ public class LearnAboutEdenred_StepDefinitions {
         String actualValue = ourValues.getText();
         Assert.assertTrue("The 'Our values' element should contain the expected value", actualValue.contains(expectedValues));
 
-
-
-
-
     }
-
-
-
 }
 
